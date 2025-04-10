@@ -1,0 +1,39 @@
+.menu-container {
+  background-color: var(--mat-sys-primary-container);
+  color: var(--mat-sys-on-primary-container);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.title-wrapper {
+  display: flex;
+  color: var(--mat-sys-on-primary-fixed);
+  flex-direction: column;
+
+  & > * {
+    display: flex;
+    font-weight: 500;
+    line-height: 1.2rem;
+    margin: 0 0 0.5rem 0;
+  }
+}
+
+.menu-wrapper {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+
+    .mat-mdc-button.active {
+      background-color: color-mix(
+        in srgb,
+        var(--mat-sys-primary) 10%,
+        transparent
+      );
+    }
+  }
+}

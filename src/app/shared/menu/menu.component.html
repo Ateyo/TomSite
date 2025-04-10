@@ -1,0 +1,27 @@
+<!-- @TODO hide menu on mobile and show it on desktop + add sidenav and toggle button -->
+<div class="menu-container">
+  <div class="title-wrapper">
+    <h3>Tom Gonzalez</h3>
+    <h2>Developpeur Front-end Toulouse</h2>
+  </div>
+  <div class="menu-wrapper">
+    <nav>
+      <button mat-button (click)="toggleSidenav()">sidenav.toggle()</button>
+      <ul class="menu-list">
+        @for (item of menuItems; track item.label) {
+          <li>
+            <a
+              mat-button
+              routerLink="{{ item.link }}"
+              routerLinkActive="active"
+              ariaCurrentWhenActive="page"
+              >{{ item.label }}</a
+            >
+          </li>
+        } @empty {
+          <li>There are no items.</li>
+        }
+      </ul>
+    </nav>
+  </div>
+</div>

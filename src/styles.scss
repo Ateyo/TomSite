@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@import '@angular/material/prebuilt-themes/cyan-orange.css';
+
+html,
+body {
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  height: 100vh;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -1.5px;
+  font-family: 'Inter Tight', sans-serif;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.75rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.25rem;
+}
+h5 {
+  font-size: 1.1rem;
+}
