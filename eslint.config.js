@@ -4,14 +4,18 @@ import tseslint from 'typescript-eslint';
 import angular from 'angular-eslint';
 import perfectionist from 'eslint-plugin-perfectionist';
 import eslintPluginPrettier from 'eslint-plugin-prettier';
+import simpleImportSort from 'eslint-plugin-simple-import-sort';
 
 export default tseslint.config(
   {
     plugins: {
       eslintPluginPrettier,
+      'simple-import-sort': simpleImportSort,
       perfectionist
     },
     rules: {
+      'simple-import-sort/imports': 'error',
+      'simple-import-sort/exports': 'error',
       'perfectionist/sort-interfaces': ['error'],
       'perfectionist/sort-named-imports': [
         'error',

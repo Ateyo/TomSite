@@ -2,11 +2,19 @@
 <div class="menu-container">
   <div class="title-wrapper">
     <h3>Tom Gonzalez</h3>
-    <h2>Developpeur Front-end Toulouse</h2>
+    <h2>Développeur Toulouse</h2>
   </div>
   <div class="menu-wrapper">
     <nav>
-      <button mat-button (click)="toggleSidenav()">sidenav.toggle()</button>
+      <div class="sidenav-toggle">
+        <button mat-mini-fab (click)="toggleSidenav()">
+          <mat-icon
+            aria-hidden="false"
+            aria-label="menu icon"
+            fontIcon="menu"
+          ></mat-icon>
+        </button>
+      </div>
       <ul class="menu-list">
         @for (item of menuItems; track item.label) {
           <li>

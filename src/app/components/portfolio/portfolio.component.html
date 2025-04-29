@@ -1,2 +1,11 @@
-<p>portfolio works!</p>
-<H1>HEYEYYI</H1>
+<div class="portfolio-wrapper">
+  <div class="portfolio-list">
+    @for (item of items(); track $index) {
+      <app-portfolio-list-item [item]="item"></app-portfolio-list-item>
+
+      <!-- <app-portfolio-item [item]="item"></app-portfolio-item> -->
+    } @empty {
+      <p>Loading...</p>
+    }
+  </div>
+</div>

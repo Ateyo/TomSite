@@ -1,0 +1,53 @@
+<mat-card class="portfolio-card">
+  <mat-card-header>
+    <mat-card-title>{{ item ? item.title : '' }} </mat-card-title>
+    @if (item && item.subtitle) {
+      <mat-card-subtitle>{{ item.subtitle }} </mat-card-subtitle>
+    }
+  </mat-card-header>
+
+  @if (item && item.image) {
+    <img
+      mat-card-image
+      src="./img/portfolio/{{ item.image }}"
+      alt="Portfolio {{ item.title }} image"
+    />
+  }
+  <mat-card-content>
+    @if (item && item.iframe) {
+      <iframe
+        width="560"
+        height="315"
+        [src]="sanitizedIframeUrl"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    }
+    <p>
+      {{ item ? item.description : '' }}
+    </p>
+
+    @if (item && item.skills) {
+      <div class="pills">
+        @for (skill of item.skills; track skill) {
+          <span class="pill skill">{{ skill }}</span>
+        }
+        <span class="pill skill">Angular 15</span>
+        <span class="pill skill">Electron</span>
+        <span class="pill skill">SCSS</span>
+        <span class="pill skill">Material Design</span>
+        <span class="pill skill">Webstorm</span>
+        <span class="pill skill">Gitlab</span>
+        <span class="pill skill">OneLogin</span>
+        <span class="pill skill">GraphQL</span>
+      </div>
+    }
+  </mat-card-content>
+
+  <mat-card-actions align="end">
+    <a mat-button routerLink="/portfolio">Retour à la liste</a>
+  </mat-card-actions>
+</mat-card>

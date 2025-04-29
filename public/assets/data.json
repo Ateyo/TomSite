@@ -1,0 +1,67 @@
+[
+  {
+    "id": "1",
+    "title": "ATMOSUD",
+    "subtitle": "Développeur PHP",
+    "description": "durée 4mois : Développement d’une application permettant le déclenchement d’alertes préfectorales liée à la qualité de l’air - Développements du frontend avec Twig (HTML, Sass) et avec l'outil TailwindCSS - Design et mise en place du formulaire de saisie de procédure d’alerte pollution - Mise en place d’un routing php - Mise en place d’une authentification SAML2 - Génération de PDF avec PHP - Récupération de liste de contacts : Akuiteo - Envoi des documents générés par mail et fax",
+    "skills": [
+      "PHP",
+      "JS",
+      "SCSS",
+      "TailwindCSS",
+      "Bitbucket",
+      "PGSQL",
+      "SAML2",
+      "Jira"
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Testia",
+    "subtitle": "Développeur Web Angular Electron",
+    "description": "sur site durée 4mois : Développeur Web Angular Electron Secteur d'activité: Industrie (test non destructif) Iondt/PMD : Développement de deux applications permettant le suivi et la génération de rapport lors de tests non destructifs - Développements du frontend sous Angular (TypeScript, HTML, Sass) et avec les framework de style Material Design - Améliorations UX-UI - Interactions avec un back Cloud (GraphQl) - Update librairies d’Angular 11 a Angular 15",
+    "skills": [
+      "Angular 15",
+      "Electron",
+      "SCSS",
+      "Material Design",
+      "Webstorm",
+      "Gitlab",
+      "OneLogin",
+      "GraphQL",
+      "Jira"
+    ]
+  },
+  {
+    "id": "3",
+    "title": "BA Healthcare",
+    "subtitle": "Développeur PHP",
+    "description": "Développeur Web Angular Secteur d'activité: santé Conception d’une IHM sous forme d’application web “marque blanche” qui doit permettre de faire le lien avec une solution embarquée existante permettant de contrôler un exosquelette pour de la rééducation. - Conception du frontend sous Angular (TypeScript, HTML, Sass) et avec les framework de style Tailwind CSS et une surcouche de composant DaisyUI, laissant la possibilité au client de facilement modifier les styles selon ses envies / besoins, - Conception du backend sous NestJS qui fait le lien avec un logiciel déjà développé par le client et création des end points de l’API RESTful, - Participation à la rédaction de documentation technique permettant d’expliquer l’architecture du projet au client.",
+    "skills": ["Angular 14", "SCSS", "TailwindCSS", "DaisyUi", "NestJs", "GIT"]
+  },
+  {
+    "id": "4",
+    "title": "Conseil National de l'Ordre des Médecins",
+    "subtitle": "Développeur Référent UX-UI",
+    "description": "- Design et intégration de 5 thèmes personnalisables pour la flotte de sites régionaux et départementaux (Drupal 7) - Refonte graphique de l'intranet de l'institution (Drupal 7) - Intégration du nouveau site du Conseil National et design et intégration des plateformes connexes (\"Mon Espace\" et \"Paiements\") (Drupal 7) - Conseils et remarques UX-UI sur les applications d'autres équipes - Design et intégration de services intranet (Angular) - Design et intégration d'un portail regroupant les applications de l'institution - Intégration du design du site du Conseil National et des plateformes connexes et ajout de services sur la plateforme \"Mon Espace\" (Drupal 9) - Design et intégration du portail V2 (Angular) - Design d'une application d'annonces (Figma) - Design d'une application de messagerie (Figma)",
+    "skills": [
+      "Angular",
+      "Drupal",
+      "SCSS",
+      "Bootstrap",
+      "Material Bootstrap",
+      "Jira",
+      "GIT",
+      "Linux"
+    ],
+    "image": "cnom_1.jpg"
+  },
+  {
+    "id": "5",
+    "title": "Documentaire Médiamag",
+    "subtitle": "Réalisateur, Ecrivain",
+    "description": "Recherche + écriture ",
+    "iframe": "https://www.youtube.com/embed/J4OJ5umAJ1Y?si=-r6cKyAzpYfmgik6&amp;start=806",
+    "skills": ["Angular", "Drupal", "SCSS"]
+  }
+]

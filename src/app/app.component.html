@@ -1,11 +1,15 @@
 <mat-sidenav-container class="example-container">
   <mat-sidenav
+    class="z-shadow-1"
     #sidenav
     mode="over"
     [(opened)]="opened"
     (opened)="events.push('open!')"
     (closed)="events.push('close!')"
   >
+    <div class="sidenav-title">
+      <div class="h3">Menu</div>
+    </div>
     <ul class="menu-list">
       @for (item of menuItems; track item.label) {
         <li>
@@ -26,7 +30,9 @@
   <mat-sidenav-content>
     <main>
       <app-menu [sidenav]="sidenav"></app-menu>
-      <router-outlet />
+      <content>
+        <router-outlet />
+      </content>
     </main>
     <footer>Footer &#64;</footer>
   </mat-sidenav-content>

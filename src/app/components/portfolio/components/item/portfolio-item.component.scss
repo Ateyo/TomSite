@@ -1,0 +1,19 @@
+mat-card {
+  display: flex;
+  flex-direction: column;
+
+  mat-card-header {
+    display: flex;
+    flex: 1 0 auto;
+  }
+  img {
+    display: flex;
+    flex: 0 1 300px;
+    overflow: hidden;
+  }
+  mat-card-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+  }
+}

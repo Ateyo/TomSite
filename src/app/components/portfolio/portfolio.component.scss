@@ -1,0 +1,22 @@
+.portfolio-wrapper {
+  margin: 0 -60%;
+}
+
+.border {
+  border: 1px solid var(--mat-sys-on-surface);
+  margin: 0.5rem;
+}
+
+img {
+  width: 100%;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-flow: row wrap;
+
+  app-portfolio-list-item {
+    margin: 0.25rem;
+    width: calc(50% - 0.5rem);
+  }
+}

@@ -1,5 +1,17 @@
+mat-sidenav-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensure it takes full height */
+}
+
+mat-sidenav-container,
+app-menu {
+  box-shadow: var(--mat-sys-level1);
+}
+
 mat-sidenav {
   background-color: var(--mat-sys-primary-container);
+  border: 1px solid rgba(125, 125, 125, 0.3);
   color: var(--mat-sys-on-primary-container);
 }
 
@@ -8,14 +20,35 @@ mat-sidenav-container {
   flex-direction: column;
   height: 100%; /* Ensure it takes full height */
 }
+
+.sidenav-title {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+
+  .h3 {
+    width: 80%;
+    text-align: center;
+    border-bottom: 2px solid var(--mat-sys-on-primary-container);
+    padding-bottom: 8px;
+  }
+}
+
 .mat-drawer-content {
   display: flex;
   flex-direction: column;
 }
+
 main {
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;
+
+  content {
+    margin: auto;
+    max-width: var(--page-width);
+    padding: var(--layout-padding);
+  }
 }
 
 .menu-list {
@@ -25,9 +58,14 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+
   li {
     display: flex;
     justify-content: center;
+
+    a {
+      width: 80%;
+    }
   }
 }
 

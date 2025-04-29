@@ -24,11 +24,26 @@ export const routes: Routes = [
       )
   },
   {
+    path: 'portfolio/items/:id',
+    title: 'Portfolio Item',
+    loadComponent: () =>
+      import(
+        './components/portfolio/components/item/portfolio-item.component'
+      ).then((m) => m.PortfolioItemComponent)
+  },
+  {
     path: 'contact',
     title: 'Contact',
     loadComponent: () =>
       import('./components/contact/contact.component').then(
         (m) => m.ContactComponent
+      )
+  },
+  {
+    path: '**',
+    loadComponent: () =>
+      import('./components/apropos/apropos.component').then(
+        (m) => m.AProposComponent
       )
   }
 ];

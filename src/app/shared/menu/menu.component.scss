@@ -12,6 +12,14 @@
   color: var(--mat-sys-on-primary-fixed);
   flex-direction: column;
 
+  h3 {
+    display: none;
+
+    @media only screen and (min-width: 768px) {
+      display: inline-block;
+    }
+  }
+
   & > * {
     display: flex;
     font-weight: 500;
@@ -21,6 +29,33 @@
 }
 
 .menu-wrapper {
+  .sidenav-toggle {
+    display: none;
+    justify-content: center;
+
+    button {
+      background-color: var(--mat-sys-on-primary-container);
+      border: none;
+      color: var(--mat-sys-on-primary-fixed);
+      cursor: pointer;
+    }
+
+    .mat-icon {
+      // font-size: 2rem;
+    }
+
+    /* Small devices (landscape phones, under 768px) */
+    @media only screen and (max-width: 768px) {
+      display: flex;
+    }
+  }
+  .menu-list {
+    display: none;
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+      display: flex;
+    }
+  }
   ul {
     list-style: none;
     padding: 0;

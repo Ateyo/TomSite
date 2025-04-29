@@ -12,6 +12,7 @@ import { SharedModule } from './shared/shared.module';
 import { MenuItem } from './shared/interfaces';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +23,7 @@ import { FormsModule } from '@angular/forms';
     MenuComponent,
     SharedModule
   ],
+  providers: [HttpClient],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

@@ -19,8 +19,8 @@ export class MenuComponent {
   menuItems: MenuItem[] = [
     { label: 'A propos', link: '/apropos' },
     { label: 'CV', link: '/cv' },
-    { label: 'Projets', link: '/projets' },
-    { label: 'Contact', link: '/contact' }
+    { label: 'Portfolio', link: '/portfolio' }
+    // { label: 'Contact', link: '/contact' }
   ];
 
   constructor(private _sideNavService: SideNavService) {
