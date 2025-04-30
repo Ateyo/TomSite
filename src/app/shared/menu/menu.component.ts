@@ -31,7 +31,6 @@ export class MenuComponent {
   toggleSidenav() {
     if (this.sidenav) {
       this.sidenav.toggle();
-    } else {
     }
   }
 }

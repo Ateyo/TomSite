@@ -5,6 +5,7 @@ export interface PortfolioItem {
   image?: string;
   images?: string[];
   description: string;
+  descriptionShort: string;
   skills: string[];
   link?: string;
   iframe?: string;

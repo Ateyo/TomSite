@@ -40,6 +40,14 @@ export const routes: Routes = [
       )
   },
   {
+    path: 'mentions-legales',
+    title: 'Mentions Légales',
+    loadComponent: () =>
+      import('./components/legal-mentions/legal-mentions.component').then(
+        (m) => m.LegalMentionsComponent
+      )
+  },
+  {
     path: '**',
     loadComponent: () =>
       import('./components/apropos/apropos.component').then(

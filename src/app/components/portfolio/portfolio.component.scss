@@ -1,5 +1,7 @@
 .portfolio-wrapper {
-  margin: 0 -60%;
+  @media only screen and (min-width: 992px) {
+    margin: 0 -10vw;
+  }
 }
 
 .border {
@@ -17,8 +19,17 @@ img {
 
   app-portfolio-list-item {
     display: flex;
-    flex: 0 0 calc(50% - 0.5rem);
+    flex: 1 1 100%;
     margin: 0.25rem;
-    // width: calc(50% - 0.5rem);
+
+    .mat-mdc-card-content {
+      display: flex;
+      flex-direction: column;
+      flex: 1 0 auto;
+    }
+
+    @media only screen and (min-width: 992px) {
+      flex: 0 0 calc(50% - 0.5rem);
+    }
   }
 }

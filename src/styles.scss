@@ -3,7 +3,7 @@
 @import '@angular/material/prebuilt-themes/cyan-orange.css';
 
 :root {
-  --page-width: 80ch;
+  --page-width: 800px;
   --layout-padding: 1.5rem;
   --mat-sys-background: rgb(0 0 0 / 19%);
 
@@ -37,6 +37,10 @@ body {
   background-color: var(--mat-sys-background);
   font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
+p {
+  white-space: pre-line;
+}
+
 h1,
 .h1 h2,
 .h2,

@@ -1,12 +1,14 @@
 <mat-sidenav-container class="example-container">
-  <mat-sidenav
-    class="z-shadow-1"
-    #sidenav
-    mode="over"
-    [(opened)]="opened"
-    (opened)="events.push('open!')"
-    (closed)="events.push('close!')"
-  >
+  <mat-sidenav class="z-shadow-1" #sidenav mode="over" [(opened)]="opened">
+    <div class="sidenav-toggle">
+      <button mat-mini-fab (click)="sidenav.toggle()">
+        <mat-icon
+          aria-hidden="false"
+          aria-label="close icon"
+          fontIcon="close"
+        ></mat-icon>
+      </button>
+    </div>
     <div class="sidenav-title">
       <div class="h3">Menu</div>
     </div>
@@ -34,6 +36,6 @@
         <router-outlet />
       </content>
     </main>
-    <footer>Footer &#64;</footer>
+    <footer><a routerLink="/mentions-legales">Mentions Legales</a></footer>
   </mat-sidenav-content>
 </mat-sidenav-container>

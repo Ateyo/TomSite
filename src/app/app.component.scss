@@ -21,6 +21,10 @@ mat-sidenav-container {
   height: 100%; /* Ensure it takes full height */
 }
 
+.sidenav-toggle {
+  float: right;
+}
+
 .sidenav-title {
   display: flex;
   justify-content: center;
@@ -77,4 +81,11 @@ footer {
     --mat-sys-secondary-container
   ); /* Change footer background color */
   color: var(--mat-sys-on-secondary-container); /* Change footer text color */
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline; /* Underline on hover */
+    }
+  }
 }
