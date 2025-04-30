@@ -16,7 +16,7 @@
   <mat-card-content>
     @if (item && item.iframe) {
       <iframe
-        width="560"
+        width="auto"
         height="315"
         [src]="sanitizedIframeUrl"
         title="YouTube video player"
@@ -35,14 +35,6 @@
         @for (skill of item.skills; track skill) {
           <span class="pill skill">{{ skill }}</span>
         }
-        <span class="pill skill">Angular 15</span>
-        <span class="pill skill">Electron</span>
-        <span class="pill skill">SCSS</span>
-        <span class="pill skill">Material Design</span>
-        <span class="pill skill">Webstorm</span>
-        <span class="pill skill">Gitlab</span>
-        <span class="pill skill">OneLogin</span>
-        <span class="pill skill">GraphQL</span>
       </div>
     }
   </mat-card-content>

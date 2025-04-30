@@ -8,8 +8,7 @@ mat-card {
   }
   img {
     display: flex;
-    flex: 0 1 300px;
-    overflow: hidden;
+    flex: 1 1 auto;
   }
   mat-card-content {
     display: flex;
