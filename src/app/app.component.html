@@ -32,6 +32,11 @@
   <mat-sidenav-content>
     <main>
       <app-menu [sidenav]="sidenav"></app-menu>
+      <ng-container *ngIf="isAproposRouteLoaded">
+        <div class="apropos-bg">
+          <img src="./img/connexion_bg.jpg" alt="connexion" />
+        </div>
+      </ng-container>
       <content>
         <router-outlet />
       </content>

@@ -4,7 +4,7 @@ import {
   AfterViewInit,
   ChangeDetectorRef
 } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { ActivatedRoute, RouterLink, RouterOutlet } from '@angular/router';
 import { MenuComponent } from './shared/menu/menu.component';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { SideNavService } from './shared/services/sidenav/side-nav.service';
@@ -13,6 +13,7 @@ import { MenuItem } from './shared/interfaces';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -30,6 +31,7 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent implements AfterViewInit {
   @ViewChild('sidenav') sidenav!: MatSidenav;
 
+  isAproposRouteLoaded = false;
   menuItems: MenuItem[] = [];
   title = 'TomSite';
   events: string[] = [];
@@ -37,7 +39,8 @@ export class AppComponent implements AfterViewInit {
 
   constructor(
     private _sideNavService: SideNavService,
-    private _cdr: ChangeDetectorRef // Inject ChangeDetectorRef
+    private _cdr: ChangeDetectorRef,
+    private _router: Router
   ) {
     this.opened = false;
   }
@@ -45,5 +48,14 @@ export class AppComponent implements AfterViewInit {
   ngAfterViewInit() {
     this.menuItems = this._sideNavService.menuItems;
     this._cdr.detectChanges();
+    this._router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        if (event.url === '/apropos') {
+          this.isAproposRouteLoaded = true;
+        } else {
+          this.isAproposRouteLoaded = false;
+        }
+      }
+    });
   }
 }
