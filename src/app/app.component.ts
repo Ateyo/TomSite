@@ -2,7 +2,8 @@ import {
   Component,
   ViewChild,
   AfterViewInit,
-  ChangeDetectorRef
+  ChangeDetectorRef,
+  inject
 } from '@angular/core';
 import { ActivatedRoute, RouterLink, RouterOutlet } from '@angular/router';
 import { MenuComponent } from './shared/menu/menu.component';
@@ -30,15 +31,14 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class AppComponent implements AfterViewInit {
   @ViewChild('sidenav') sidenav!: MatSidenav;
-
-  isAproposRouteLoaded = false;
+  private _sideNavService = inject(SideNavService);
+  isBGNeeded = true;
   menuItems: MenuItem[] = [];
   title = 'TomSite';
   events: string[] = [];
   opened: boolean;
 
   constructor(
-    private _sideNavService: SideNavService,
     private _cdr: ChangeDetectorRef,
     private _router: Router
   ) {
@@ -50,10 +50,15 @@ export class AppComponent implements AfterViewInit {
     this._cdr.detectChanges();
     this._router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        if (event.url === '/apropos') {
-          this.isAproposRouteLoaded = true;
-        } else {
-          this.isAproposRouteLoaded = false;
+        console.log('NavigationEnd:', event.url);
+        switch (event.url) {
+          case '/':
+          case '/apropos':
+          case '/cv':
+            this.isBGNeeded = true;
+            break;
+          default:
+            this.isBGNeeded = false;
         }
       }
     });

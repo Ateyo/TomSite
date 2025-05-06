@@ -32,13 +32,43 @@
   <mat-sidenav-content>
     <main>
       <app-menu [sidenav]="sidenav"></app-menu>
-      <ng-container *ngIf="isAproposRouteLoaded">
-        <div class="apropos-bg">
-          <img src="./img/connexion_bg.jpg" alt="connexion" />
+      <div class="future-grid-wrapper">
+        <div class="future-grid">
+          <div class="future-grid-left">
+            <div class="future-grid-item"></div>
+            <div class="future-grid-item"></div>
+            <div class="future-grid-item"></div>
+            <div class="future-grid-item"></div>
+            <div class="future-grid-item"></div>
+            <div class="future-grid-item"></div>
+            <div class="future-grid-item"></div>
+            <div class="future-grid-item"></div>
+            <div class="future-grid-item"></div>
+          </div>
+          <div class="future-grid-right">
+            <div class="future-grid-item"></div>
+            <div class="future-grid-item"></div>
+            <div class="future-grid-item"></div>
+            <div class="future-grid-item"></div>
+            <div class="future-grid-item"></div>
+            <div class="future-grid-item"></div>
+            <div class="future-grid-item"></div>
+            <div class="future-grid-item"></div>
+            <div class="future-grid-item"></div>
+          </div>
         </div>
-      </ng-container>
+      </div>
+      <!-- <div class="apropos-bg">
+          <img src="./img/connexion_bg.jpg" alt="connexion" />
+        </div> -->
       <content>
-        <router-outlet />
+        @if (isBGNeeded) {
+          <div>
+            <router-outlet />
+          </div>
+        } @else {
+          <router-outlet />
+        }
       </content>
     </main>
     <footer><a routerLink="/mentions-legales">Mentions Legales</a></footer>
