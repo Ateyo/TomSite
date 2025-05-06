@@ -16,6 +16,7 @@
   align-items: center;
   color: var(--mat-sys-on-primary-container);
   transition: all 0.3s ease-in-out;
+  text-decoration: none !important;
 
   &:hover {
     color: color-mix(in hsl, var(--mat-sys-on-primary-container), #ffffff 60%);
