@@ -3,65 +3,66 @@
 @import '@angular/material/prebuilt-themes/cyan-orange.css';
 
 /*CHEAT SHEET*/
-:root {
-  --mat-sys-background: light-dark(#f7faf9, #101414);
-  --mat-sys-error: light-dark(#ba1a1a, #ffb4ab);
-  --mat-sys-error-container: light-dark(#ffdad6, #93000a);
-  --mat-sys-inverse-on-surface: light-dark(#eff1f0, #2d3131);
-  --mat-sys-inverse-primary: light-dark(#00dddd, #006a6a);
-  --mat-sys-inverse-surface: light-dark(#2d3131, #e0e3e2);
-  --mat-sys-on-background: light-dark(#191c1c, #e0e3e2);
-  --mat-sys-on-error: light-dark(#ffffff, #690005);
-  --mat-sys-on-error-container: light-dark(#93000a, #ffdad6);
-  --mat-sys-on-primary: light-dark(#ffffff, #003737);
-  --mat-sys-on-primary-container: light-dark(#004f4f, #00fbfb);
-  --mat-sys-on-primary-fixed: light-dark(#002020, #002020);
-  --mat-sys-on-primary-fixed-variant: light-dark(#004f4f, #004f4f);
-  --mat-sys-on-secondary: light-dark(#ffffff, #1b3534);
-  --mat-sys-on-secondary-container: light-dark(#324b4b, #cce8e7);
-  --mat-sys-on-secondary-fixed: light-dark(#051f1f, #051f1f);
-  --mat-sys-on-secondary-fixed-variant: light-dark(#324b4b, #324b4b);
-  --mat-sys-on-surface: light-dark(#191c1c, #e0e3e2);
-  --mat-sys-on-surface-variant: light-dark(#3f4948, #dae5e4);
-  --mat-sys-on-tertiary: light-dark(#ffffff, #003737);
-  --mat-sys-on-tertiary-container: light-dark(#004f4f, #00fbfb);
-  --mat-sys-on-tertiary-fixed: light-dark(#002020, #002020);
-  --mat-sys-on-tertiary-fixed-variant: light-dark(#004f4f, #004f4f);
-  --mat-sys-outline: light-dark(#6f7979, #889392);
-  --mat-sys-outline-variant: light-dark(#bec9c8, #3f4948);
-  --mat-sys-primary: light-dark(#006a6a, #00dddd);
-  --mat-sys-primary-container: light-dark(#00fbfb, #004f4f);
-  --mat-sys-primary-fixed: light-dark(#00fbfb, #00fbfb);
-  --mat-sys-primary-fixed-dim: light-dark(#00dddd, #00dddd);
-  --mat-sys-scrim: light-dark(#000000, #000000);
-  --mat-sys-secondary: light-dark(#4a6363, #b0cccb);
-  --mat-sys-secondary-container: light-dark(#cce8e7, #324b4b);
-  --mat-sys-secondary-fixed: light-dark(#cce8e7, #cce8e7);
-  --mat-sys-secondary-fixed-dim: light-dark(#b0cccb, #b0cccb);
-  --mat-sys-shadow: light-dark(#000000, #000000);
-  --mat-sys-surface: light-dark(#f7faf9, #101414);
-  --mat-sys-surface-bright: light-dark(#f7faf9, #363a39);
-  --mat-sys-surface-container: light-dark(#ebefed, #1c2020);
-  --mat-sys-surface-container-high: light-dark(#e6e9e7, #272b2a);
-  --mat-sys-surface-container-highest: light-dark(#e0e3e2, #313635);
-  --mat-sys-surface-container-low: light-dark(#f1f4f3, #191c1c);
-  --mat-sys-surface-container-lowest: light-dark(#ffffff, #0b0f0e);
-  --mat-sys-surface-dim: light-dark(#d7dbd9, #101414);
-  --mat-sys-surface-tint: light-dark(#006a6a, #00dddd);
-  --mat-sys-surface-variant: light-dark(#dae5e4, #3f4948);
-  --mat-sys-tertiary: light-dark(#006a6a, #00dddd);
-  --mat-sys-tertiary-container: light-dark(#00fbfb, #004f4f);
-  --mat-sys-tertiary-fixed: light-dark(#00fbfb, #00fbfb);
-  --mat-sys-tertiary-fixed-dim: light-dark(#00dddd, #00dddd);
-  --mat-sys-neutral-variant20: #293232;
-  --mat-sys-neutral10: #191c1c;
-}
+// :root {
+//   --mat-sys-background: light-dark(#f7faf9, #101414);
+//   --mat-sys-error: light-dark(#ba1a1a, #ffb4ab);
+//   --mat-sys-error-container: light-dark(#ffdad6, #93000a);
+//   --mat-sys-inverse-on-surface: light-dark(#eff1f0, #2d3131);
+//   --mat-sys-inverse-primary: light-dark(#00dddd, #006a6a);
+//   --mat-sys-inverse-surface: light-dark(#2d3131, #e0e3e2);
+//   --mat-sys-on-background: light-dark(#191c1c, #e0e3e2);
+//   --mat-sys-on-error: light-dark(#ffffff, #690005);
+//   --mat-sys-on-error-container: light-dark(#93000a, #ffdad6);
+//   --mat-sys-on-primary: light-dark(#ffffff, #003737);
+//   --mat-sys-on-primary-container: light-dark(#004f4f, #00fbfb);
+//   --mat-sys-on-primary-fixed: light-dark(#002020, #002020);
+//   --mat-sys-on-primary-fixed-variant: light-dark(#004f4f, #004f4f);
+//   --mat-sys-on-secondary: light-dark(#ffffff, #1b3534);
+//   --mat-sys-on-secondary-container: light-dark(#324b4b, #cce8e7);
+//   --mat-sys-on-secondary-fixed: light-dark(#051f1f, #051f1f);
+//   --mat-sys-on-secondary-fixed-variant: light-dark(#324b4b, #324b4b);
+//   --mat-sys-on-surface: light-dark(#191c1c, #e0e3e2);
+//   --mat-sys-on-surface-variant: light-dark(#3f4948, #dae5e4);
+//   --mat-sys-on-tertiary: light-dark(#ffffff, #003737);
+//   --mat-sys-on-tertiary-container: light-dark(#004f4f, #00fbfb);
+//   --mat-sys-on-tertiary-fixed: light-dark(#002020, #002020);
+//   --mat-sys-on-tertiary-fixed-variant: light-dark(#004f4f, #004f4f);
+//   --mat-sys-outline: light-dark(#6f7979, #889392);
+//   --mat-sys-outline-variant: light-dark(#bec9c8, #3f4948);
+//   --mat-sys-primary: light-dark(#006a6a, #00dddd);
+//   --mat-sys-primary-container: light-dark(#00fbfb, #004f4f);
+//   --mat-sys-primary-fixed: light-dark(#00fbfb, #00fbfb);
+//   --mat-sys-primary-fixed-dim: light-dark(#00dddd, #00dddd);
+//   --mat-sys-scrim: light-dark(#000000, #000000);
+//   --mat-sys-secondary: light-dark(#4a6363, #b0cccb);
+//   --mat-sys-secondary-container: light-dark(#cce8e7, #324b4b);
+//   --mat-sys-secondary-fixed: light-dark(#cce8e7, #cce8e7);
+//   --mat-sys-secondary-fixed-dim: light-dark(#b0cccb, #b0cccb);
+//   --mat-sys-shadow: light-dark(#000000, #000000);
+//   --mat-sys-surface: light-dark(#f7faf9, #101414);
+//   --mat-sys-surface-bright: light-dark(#f7faf9, #363a39);
+//   --mat-sys-surface-container: light-dark(#ebefed, #1c2020);
+//   --mat-sys-surface-container-high: light-dark(#e6e9e7, #272b2a);
+//   --mat-sys-surface-container-highest: light-dark(#e0e3e2, #313635);
+//   --mat-sys-surface-container-low: light-dark(#f1f4f3, #191c1c);
+//   --mat-sys-surface-container-lowest: light-dark(#ffffff, #0b0f0e);
+//   --mat-sys-surface-dim: light-dark(#d7dbd9, #101414);
+//   --mat-sys-surface-tint: light-dark(#006a6a, #00dddd);
+//   --mat-sys-surface-variant: light-dark(#dae5e4, #3f4948);
+//   --mat-sys-tertiary: light-dark(#006a6a, #00dddd);
+//   --mat-sys-tertiary-container: light-dark(#00fbfb, #004f4f);
+//   --mat-sys-tertiary-fixed: light-dark(#00fbfb, #00fbfb);
+//   --mat-sys-tertiary-fixed-dim: light-dark(#00dddd, #00dddd);
+//   --mat-sys-neutral-variant20: #293232;
+//   --mat-sys-neutral10: #191c1c;
+// }
 
 :root {
   --page-width: 800px;
   --layout-padding: 1.5rem;
   --mat-sys-background: rgb(0 0 0 / 19%);
   --border-radius: 0.5rem;
+  --mat-sys-analogous: #00fb7e;
   @media only screen and (min-width: 768px) {
     --layout-padding: 3.12rem;
   }
@@ -69,9 +70,7 @@
 
 html {
   color-scheme: dark;
-  background: url(../public/img/triangle-mosaic.webp);
   background: url(../public/img/asfalt-light.png); //--mat-sys-background: rgb(0 0 0 / 19%)
-  // background: url(../public/img/silver-scales.png); //--mat-sys-background: rgb(0 0 0 / 50%)
 
   @include mat.theme(
     (
@@ -84,16 +83,34 @@ html {
 
 html,
 body {
+  margin: 0;
+  padding: 0;
   color: var(--mat-sys-background);
   height: 100vh;
 }
 body {
-  margin: 0;
   background-color: var(--mat-sys-background);
   font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
+
 p {
   white-space: pre-line;
+}
+
+a:not(.mdc-button) {
+  color: var(--mat-sys-primary);
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.1s ease;
+
+  &:hover {
+    color: color-mix(
+      in hsl,
+      var(--mat-sys-primary),
+      #ffffff 60%
+    ); //(--mat-sys-primary);
+    text-decoration: underline;
+  }
 }
 
 h1,
@@ -194,6 +211,11 @@ mat-card.mat-mdc-card {
     0 9px 46px 8px rgba(0, 0, 0, 0.12),
     0 11px 15px -7px rgba(0, 0, 0, 0.2);
 }
+
+path#tongue {
+  stroke: rgba(0, 0, 0, 0) !important;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 }

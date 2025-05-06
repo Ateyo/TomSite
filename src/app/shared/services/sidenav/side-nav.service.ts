@@ -15,9 +15,7 @@ export class SideNavService {
 
   toggleSidenav() {
     if (this.sidenav) {
-      console.log('Current isOpen state:', this.sidenav.opened);
       this.sidenav.toggle();
-      console.log('New isOpen state:', this.sidenav.opened);
     } else {
       console.error('Sidenav is not initialized');
     }

@@ -26,7 +26,5 @@ export class PortfolioItemComponent {
     this.sanitizedIframeUrl = this.item.iframe
       ? this._sanitizer.bypassSecurityTrustResourceUrl(this.item.iframe)
       : null;
-
-    console.log(this.item);
   }
 }

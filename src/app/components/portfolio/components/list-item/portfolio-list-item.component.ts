@@ -10,8 +10,4 @@ import { PortfolioItem } from '../../../../shared/interfaces';
 })
 export class PortfolioListItemComponent {
   @Input() item?: PortfolioItem;
-
-  constructor() {
-    console.log(this.item);
-  }
 }

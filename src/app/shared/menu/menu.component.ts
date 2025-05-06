@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Input } from '@angular/core';
 import { SideNavService } from '../services/sidenav/side-nav.service';
@@ -15,6 +15,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 })
 export class MenuComponent {
   @Input() sidenav!: MatSidenav;
+  private _sideNavService = inject(SideNavService);
 
   menuItems: MenuItem[] = [
     { label: 'A propos', link: '/apropos' },
@@ -23,7 +24,7 @@ export class MenuComponent {
     // { label: 'Contact', link: '/contact' }
   ];
 
-  constructor(private _sideNavService: SideNavService) {
+  constructor() {
     this._sideNavService.menuItems = this.menuItems;
     this._sideNavService.setSidenav(this.sidenav);
   }

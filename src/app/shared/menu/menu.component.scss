@@ -14,11 +14,31 @@
 .title-wrapper {
   display: flex;
   align-items: center;
-  color: var(--mat-sys-on-primary-fixed);
+  color: var(--mat-sys-on-primary-container);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: color-mix(in hsl, var(--mat-sys-on-primary-container), #ffffff 60%);
+
+    svg #icon path,
+    svg #smile path {
+      stroke: color-mix(
+        in hsl,
+        var(--mat-sys-on-primary-container),
+        #ffffff 60%
+      );
+    }
+  }
 
   .title--logo {
     margin-right: 1rem;
+
+    svg path {
+      transition: all 0.3s ease-in-out;
+      stroke: var(--mat-sys-on-primary-container);
+    }
   }
+
   .title--text {
     display: flex;
     flex-direction: column;

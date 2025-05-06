@@ -32,16 +32,16 @@ import { Router, NavigationEnd } from '@angular/router';
 export class AppComponent implements AfterViewInit {
   @ViewChild('sidenav') sidenav!: MatSidenav;
   private _sideNavService = inject(SideNavService);
+
+  private _cdr = inject(ChangeDetectorRef);
+  private _router = inject(Router);
   isBGNeeded = true;
   menuItems: MenuItem[] = [];
   title = 'TomSite';
   events: string[] = [];
   opened: boolean;
 
-  constructor(
-    private _cdr: ChangeDetectorRef,
-    private _router: Router
-  ) {
+  constructor() {
     this.opened = false;
   }
 
@@ -50,7 +50,6 @@ export class AppComponent implements AfterViewInit {
     this._cdr.detectChanges();
     this._router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        console.log('NavigationEnd:', event.url);
         switch (event.url) {
           case '/':
           case '/apropos':

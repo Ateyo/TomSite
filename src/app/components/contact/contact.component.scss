@@ -9,16 +9,6 @@
     margin-bottom: 20px;
   }
 
-  a {
-    color: #0077b5;
-    text-decoration: none;
-    font-weight: bold;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
   form {
     display: flex;
     flex-direction: column;

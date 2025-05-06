@@ -15,7 +15,6 @@ export class PortfolioService {
     this._http.get('assets/data.json').subscribe((response) => {
       this._response = response;
       this._items.set(this._response);
-      console.log(this._items());
     });
   }
 

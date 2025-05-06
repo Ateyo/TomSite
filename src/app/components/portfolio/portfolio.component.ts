@@ -19,6 +19,5 @@ export class PortfolioComponent {
 
   ngOnInit() {
     this.items = this._portfolioService.items;
-    console.log(this.items());
   }
 }
