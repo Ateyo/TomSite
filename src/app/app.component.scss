@@ -105,7 +105,11 @@ main {
 }
 
 footer {
-  background-color: var(--mat-sys-secondary-container);
+  background-color: color-mix(
+    in hsl,
+    var(--mat-sys-secondary-container),
+    transparent 5%
+  );
   color: var(--mat-sys-on-secondary-container);
   flex-shrink: 0;
   text-align: center;
@@ -124,7 +128,7 @@ footer {
   display: block;
   box-sizing: content-box;
   position: absolute;
-  top: 0;
+  top: 86px;
   left: 0;
   overflow: hidden;
   max-height: 800px;
@@ -136,7 +140,6 @@ footer {
   display: grid;
   grid-template-columns: 50% 50%;
   gap: 1rem;
-  margin: 1rem 0;
   -webkit-mask-image: linear-gradient(to top, transparent 0%, black 30%);
   mask-image: linear-gradient(to top, transparent 0%, black 30%);
   perspective: 100px;

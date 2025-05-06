@@ -1,5 +1,9 @@
 .menu-container {
-  background-color: var(--mat-sys-primary-container);
+  background-color: color-mix(
+    in hsl,
+    var(--mat-sys-primary-container),
+    transparent 20%
+  );
   color: var(--mat-sys-on-primary-container);
   display: flex;
   justify-content: space-between;
