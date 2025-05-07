@@ -5,16 +5,15 @@ import {
   ChangeDetectorRef,
   inject
 } from '@angular/core';
-import { ActivatedRoute, RouterLink, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+
+import { Router, NavigationEnd } from '@angular/router';
 import { MenuComponent } from './shared/menu/menu.component';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { SideNavService } from './shared/services/sidenav/side-nav.service';
 import { SharedModule } from './shared/shared.module';
 import { MenuItem } from './shared/interfaces';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { FormsModule } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
-import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -54,6 +53,7 @@ export class AppComponent implements AfterViewInit {
           case '/':
           case '/apropos':
           case '/cv':
+          case '/mentions-legales':
             this.isBGNeeded = true;
             break;
           default:

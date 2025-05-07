@@ -1,0 +1,68 @@
+<div class="window">
+  <form (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <mat-label>Item Title</mat-label>
+      <input matInput type="text" [(ngModel)]="item.title" name="title" />
+    </mat-form-field>
+    <br />
+
+    <mat-form-field>
+      <mat-label>Item Subtitle</mat-label>
+      <input matInput type="text" [(ngModel)]="item.subtitle" name="subtitle" />
+    </mat-form-field>
+    <br />
+
+    <mat-form-field>
+      <mat-label>Item Description</mat-label>
+      <textarea
+        matInput
+        [(ngModel)]="item.description"
+        name="description"
+      ></textarea>
+    </mat-form-field>
+    <br />
+
+    <mat-form-field>
+      <mat-label>Short Description</mat-label>
+      <input
+        matInput
+        type="text"
+        [(ngModel)]="item.descriptionShort"
+        name="descriptionShort"
+      />
+    </mat-form-field>
+    <br />
+
+    <mat-form-field>
+      <mat-label>Item Image</mat-label>
+      <input matInput type="text" [(ngModel)]="item.image" name="image" />
+    </mat-form-field>
+    <br />
+
+    <mat-form-field>
+      <mat-label>Skills (comma-separated)</mat-label>
+      <input
+        matInput
+        type="text"
+        [(ngModel)]="skillsInput"
+        name="skills"
+        (change)="updateSkills()"
+      />
+    </mat-form-field>
+    <br />
+
+    <mat-form-field>
+      <mat-label>Link</mat-label>
+      <input matInput type="text" [(ngModel)]="item.link" name="link" />
+    </mat-form-field>
+    <br />
+
+    <mat-form-field>
+      <mat-label>Iframe</mat-label>
+      <input matInput type="text" [(ngModel)]="item.iframe" name="iframe" />
+    </mat-form-field>
+    <br />
+
+    <button mat-button>Add Item</button>
+  </form>
+</div>

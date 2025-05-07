@@ -101,7 +101,7 @@ a:not(.mdc-button) {
   color: var(--mat-sys-primary);
   font-weight: bold;
   text-decoration: none;
-  transition: all 0.1s ease;
+  transition: all 0.1s ease-in-out;
 
   &:hover {
     color: color-mix(
@@ -167,14 +167,23 @@ h6,
   }
 }
 
-mat-card.mat-mdc-card {
+.window {
   background-color: color-mix(
     in hsl,
     var(--mat-sys-surface-container-low),
     transparent 5%
-  );
+  ) !important;
   border: 4px solid
-    color-mix(in hsl, var(--mat-sys-primary-container), transparent 5%);
+    color-mix(in hsl, var(--mat-sys-primary-container), transparent 5%) !important;
+  transition: border-color 0.1s ease !important;
+
+  &:hover {
+    border-color: color-mix(
+      in hsl,
+      var(--mat-sys-primary-fixed),
+      transparent 5%
+    ) !important;
+  }
 }
 
 .z-shadow-1 {

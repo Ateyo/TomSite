@@ -18,8 +18,13 @@ export class PortfolioService {
     });
   }
 
-  get items() {
-    return this._items;
+  get items(): PortfolioItem[] {
+    console.log('Fetching items:', this._items());
+    return this._items();
+  }
+
+  get itemsSignal() {
+    return this._items.asReadonly(); // Expose a readonly signal
   }
 
   getItemByTitle(title: string) {
@@ -28,5 +33,25 @@ export class PortfolioService {
 
   getItemById(id: string) {
     return this._items().find((item) => item.id === id);
+  }
+
+  getNextId() {
+    return this._items().length + 1;
+  }
+
+  addItem(item: PortfolioItem): Promise<PortfolioItem[]> {
+    this._items.update((items) => {
+      console.log('Adding item:', item);
+      console.log('Current items:', items);
+      items.push(item);
+      return items;
+    });
+
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        console.log('Updated items:', this._items());
+        resolve(this._items());
+      }, 1000);
+    });
   }
 }

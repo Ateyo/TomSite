@@ -32,6 +32,14 @@ export const routes: Routes = [
       ).then((m) => m.PortfolioItemComponent)
   },
   {
+    path: 'portfolio/form',
+    title: 'Ajouter au Portfolio',
+    loadComponent: () =>
+      import(
+        './components/portfolio/components/item-form/item-form.component'
+      ).then((m) => m.ItemFormComponent)
+  },
+  {
     path: 'contact',
     title: 'Contact',
     loadComponent: () =>
@@ -49,9 +57,6 @@ export const routes: Routes = [
   },
   {
     path: '**',
-    loadComponent: () =>
-      import('./components/apropos/apropos.component').then(
-        (m) => m.AProposComponent
-      )
+    redirectTo: '/apropos'
   }
 ];

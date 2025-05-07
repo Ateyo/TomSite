@@ -7,6 +7,9 @@ import { SideNavService } from './services/sidenav/side-nav.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { FormsModule } from '@angular/forms'; // Import the FormsModule
+import { PortfolioService } from './services/portfolio/portfolio.service';
+import { MatInputModule } from '@angular/material/input';
 
 const matModules = [
   CommonModule,
@@ -16,13 +19,15 @@ const matModules = [
   MatIconModule,
   MatSidenav,
   MatSidenavModule,
-  RouterLink
+  RouterLink,
+  FormsModule,
+  MatInputModule
   // Add other Material modules here as needed
 ];
 
 @NgModule({
   exports: [...matModules],
   imports: [...matModules],
-  providers: [SideNavService]
+  providers: [SideNavService, PortfolioService]
 })
 export class SharedModule {}

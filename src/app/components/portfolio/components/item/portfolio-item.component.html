@@ -14,7 +14,7 @@
     />
   }
   <mat-card-content>
-    @if (item && item.iframe) {
+    @if (item.iframe && sanitizedIframeUrl) {
       <iframe
         width="auto"
         height="315"

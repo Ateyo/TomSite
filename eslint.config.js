@@ -1,87 +1,17 @@
-// @ts-check
-import eslint from '@eslint/js';
-import tseslint from 'typescript-eslint';
-import angular from 'angular-eslint';
-import perfectionist from 'eslint-plugin-perfectionist';
-import eslintPluginPrettier from 'eslint-plugin-prettier';
+import eslintPluginImport from 'eslint-plugin-import';
+import prettierPlugin from 'eslint-plugin-prettier';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 
-export default tseslint.config(
+export default [
   {
     plugins: {
-      eslintPluginPrettier,
       'simple-import-sort': simpleImportSort,
-      perfectionist
+      import: eslintPluginImport,
+      prettier: prettierPlugin
     },
     rules: {
       'simple-import-sort/imports': 'error',
-      'simple-import-sort/exports': 'error',
-      'perfectionist/sort-interfaces': ['error'],
-      'perfectionist/sort-named-imports': [
-        'error',
-        {
-          type: 'alphabetical',
-          order: 'asc',
-          fallbackSort: { type: 'unsorted' },
-          ignoreAlias: false,
-          ignoreCase: true,
-          specialCharacters: 'keep',
-          groupKind: 'mixed',
-          partitionByNewLine: false,
-          partitionByComment: false,
-          newlinesBetween: 'ignore',
-          groups: [],
-          customGroups: []
-        }
-      ],
-      'perfectionist/sort-objects': [
-        'error',
-        {
-          type: 'alphabetical'
-        }
-      ]
-    },
-    settings: {
-      perfectionist: {
-        partitionByComment: true,
-        type: 'line-length'
-      }
+      'simple-import-sort/exports': 'error'
     }
-  },
-  {
-    extends: [
-      eslint.configs.recommended,
-      ...tseslint.configs.recommended,
-      ...tseslint.configs.stylistic,
-      ...angular.configs.tsRecommended
-    ],
-    files: ['**/*.ts'],
-    processor: angular.processInlineTemplates,
-    rules: {
-      '@angular-eslint/component-selector': [
-        'error',
-        {
-          type: 'element',
-          prefix: 'app',
-          style: 'kebab-case'
-        }
-      ],
-      '@angular-eslint/directive-selector': [
-        'error',
-        {
-          type: 'attribute',
-          prefix: 'app',
-          style: 'camelCase'
-        }
-      ]
-    }
-  },
-  {
-    extends: [
-      ...angular.configs.templateRecommended,
-      ...angular.configs.templateAccessibility
-    ],
-    files: ['**/*.html'],
-    rules: {}
   }
-);
+];
