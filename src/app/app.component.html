@@ -4,8 +4,7 @@
     #sidenav
     mode="over"
     [(opened)]="opened"
-    (click)="sidenav.toggle()"
-  >
+    (click)="sidenav.toggle()">
     <div class="sidenav-title">
       <div class="h3">Menu</div>
     </div>
@@ -16,9 +15,9 @@
             mat-button
             routerLink="{{ item.link }}"
             routerLinkActive="active"
-            ariaCurrentWhenActive="page"
-            >{{ item.label }}</a
-          >
+            ariaCurrentWhenActive="page">
+            {{ item.label }}
+          </a>
         </li>
       } @empty {
         <li>There are no items.</li>
@@ -62,8 +61,7 @@
                 height="32px"
                 viewBox="0 0 40 32"
                 enable-background="new 0 0 40 32"
-                xml:space="preserve"
-              >
+                xml:space="preserve">
                 <g id="icon">
                   <path
                     id="trace_folder"
@@ -75,8 +73,7 @@
         c0,0.625,0.001,25.058,0,25.847c0.024,1.186-1.227,2.462-2.277,2.477c-1.178,0.001-32.656,0.057-33.473,0.049
         C2.43,31,1.019,29.409,1.019,28.58c0-0.83-0.037-19.127,0-20.005c0.037-0.879,1.231-2.67,2.723-2.674s19.72-0.049,20.252-0.049
         s0.594-0.285,0.594-0.594c0-0.31,0-2.012,0-2.822c0-0.811,0.983-1.437,1.584-1.437s10.708,0,10.708,0s0.434-0.013,0.979,0
-        S39.021,1.903,38.997,2.634z"
-                  />
+        S39.021,1.903,38.997,2.634z" />
                   <g id="smile">
                     <path
                       id="eye-l"
@@ -85,8 +82,7 @@
                       stroke-width="1.3"
                       stroke-miterlimit="10"
                       d="M12.753,16.003
-          c0,0-0.055-3.391,2.551-3.391c2.604,0,2.574,3.243,2.574,3.243"
-                    />
+          c0,0-0.055-3.391,2.551-3.391c2.604,0,2.574,3.243,2.574,3.243" />
                     <path
                       id="eye-r"
                       fill="none"
@@ -94,8 +90,7 @@
                       stroke-width="1.3"
                       stroke-miterlimit="10"
                       d="M29.244,16.003
-          c0,0,0.056-3.391-2.55-3.391s-2.573,3.243-2.573,3.243"
-                    />
+          c0,0,0.056-3.391-2.55-3.391s-2.573,3.243-2.573,3.243" />
                     <path
                       id="mouth"
                       fill="none"
@@ -103,8 +98,7 @@
                       stroke-width="1.3"
                       stroke-miterlimit="10"
                       d="M17.017,20.33h8.3
-          c0,0-0.148,2.525-2.209,3.509c-0.873,0.688-2.822,0.577-3.844,0C17.482,22.837,17.017,20.33,17.017,20.33z"
-                    />
+          c0,0-0.148,2.525-2.209,3.509c-0.873,0.688-2.822,0.577-3.844,0C17.482,22.837,17.017,20.33,17.017,20.33z" />
                     <path
                       id="tongue"
                       fill="none"
@@ -113,8 +107,7 @@
                       stroke-miterlimit="10"
                       d="M23.145,23.803
           c0,0-0.548-0.872-0.794-1.059c-0.245-0.187-0.71-0.391-1.044-0.093c-0.335,0.297-0.187,0.111-0.26,0.204
-          c-0.075,0.093-0.521-0.259-0.93-0.093c-0.407,0.168-1.001,0.893-1.001,0.893"
-                    />
+          c-0.075,0.093-0.521-0.259-0.93-0.093c-0.407,0.168-1.001,0.893-1.001,0.893" />
                   </g>
                 </g>
               </svg>
@@ -123,9 +116,6 @@
           </div>
         </div>
       </div>
-      <!-- <div class="apropos-bg">
-          <img src="./img/connexion_bg.jpg" alt="connexion" />
-        </div> -->
       <content>
         @if (isBGNeeded) {
           <div class="window">
@@ -136,6 +126,30 @@
         }
       </content>
     </main>
-    <footer><a routerLink="/mentions-legales">Mentions Legales</a></footer>
+    <footer>
+      <div class="footer-center">
+        <a routerLink="/mentions-legales">Mentions Legales</a>
+      </div>
+      <div class="footer-right">
+        <a href="https://github.com/Ateyo/" target="_blank" title="Github">
+          <i class="nf nf-dev-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/tom-gonzalez/"
+          target="_blank"
+          title="LinkedIn">
+          <i class="nf nf-dev-linkedin"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/ateyoblueman/"
+          target="_blank"
+          title="Instagram">
+          <i class="nf nf-fa-instagram"></i>
+        </a>
+        <a href="mailto:gonzalez.fleurence.tom@gmail.com" title="Mail">
+          <i class="nf nf-fa-envelope"></i>
+        </a>
+      </div>
+    </footer>
   </mat-sidenav-content>
 </mat-sidenav-container>

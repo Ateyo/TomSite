@@ -1,8 +1,8 @@
 <mat-card class="portfolio-card">
   <mat-card-header>
-    <mat-card-title>{{ item ? item.title : '' }} </mat-card-title>
+    <mat-card-title>{{ item ? item.title : '' }}</mat-card-title>
     @if (item && item.subtitle) {
-      <mat-card-subtitle>{{ item.subtitle }} </mat-card-subtitle>
+      <mat-card-subtitle>{{ item.subtitle }}</mat-card-subtitle>
     }
   </mat-card-header>
 
@@ -10,8 +10,7 @@
     <img
       mat-card-image
       src="./img/portfolio/{{ item.image }}"
-      alt="Portfolio {{ item.title }} image"
-    />
+      alt="Portfolio {{ item.title }} image" />
   }
   <mat-card-content>
     @if (item.iframe && sanitizedIframeUrl) {
@@ -23,8 +22,7 @@
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
+        allowfullscreen></iframe>
     }
     <p>
       {{ item ? item.description : '' }}
@@ -33,7 +31,15 @@
     @if (item && item.skills) {
       <div class="pills">
         @for (skill of item.skills; track skill) {
-          <span class="pill skill">{{ skill }}</span>
+          <span class="pill skill">
+            @if (getSkillUrl(skill)) {
+              <a href="{{ getSkillUrl(skill) }}" target="_blank">
+                {{ skill }}
+              </a>
+            } @else {
+              {{ skill }}
+            }
+          </span>
         }
       </div>
     }

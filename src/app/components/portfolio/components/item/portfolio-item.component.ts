@@ -4,6 +4,7 @@ import { PortfolioItem } from '../../../../shared/interfaces';
 import { PortfolioService } from '../../../../shared/services/portfolio/portfolio.service';
 import { ActivatedRoute } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
+import { SKILL_LINKS } from '../../../../shared/dictionnary/skills-links';
 
 @Component({
   selector: 'app-portfolio-item',
@@ -31,5 +32,9 @@ export class PortfolioItemComponent {
         ? this._sanitizer.bypassSecurityTrustResourceUrl(this.item.iframe)
         : null;
     }
+  }
+
+  getSkillUrl(skill: string): string | undefined {
+    return SKILL_LINKS[skill];
   }
 }

@@ -1,0 +1,49 @@
+.snackbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+
+  .snackbar--message {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-between;
+
+    &::after {
+      display: inline-block;
+      color: var(--mat-sys-analogous);
+      font-family: 'NerdFontsSymbols Nerd Font';
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      font-size: 1.5rem;
+    }
+  }
+
+  &.snackbar-success {
+    .snackbar--message {
+      &::after {
+        content: '\00f058';
+        color: var(--mat-sys-analogous);
+      }
+    }
+  }
+
+  &.snackbar-error {
+    .snackbar--message {
+      &::after {
+        content: '\00f05c';
+        color: var(--mat-sys-error);
+      }
+    }
+  }
+  &.snackbar-warning {
+    .snackbar--message {
+      &::after {
+        content: '\00f071';
+        color: var(--mat-sys-warning);
+      }
+    }
+  }
+}

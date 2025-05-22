@@ -11,21 +11,21 @@ export const routes: Routes = [
   },
   {
     path: 'cv',
-    title: 'CV',
+    title: 'Mon CV',
     loadComponent: () =>
       import('./components/cv/cv.component').then((m) => m.CvComponent)
   },
   {
     path: 'portfolio',
-    title: 'Portfolio',
+    title: 'Portfolio - Liste des projets',
     loadComponent: () =>
       import('./components/portfolio/portfolio.component').then(
         (m) => m.PortfolioComponent
       )
   },
   {
-    path: 'portfolio/items/:id',
-    title: 'Portfolio Item',
+    path: 'portfolio/project/:id',
+    title: 'Projet - Détails',
     loadComponent: () =>
       import(
         './components/portfolio/components/item/portfolio-item.component'

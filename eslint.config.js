@@ -1,17 +1,21 @@
-import eslintPluginImport from 'eslint-plugin-import';
+import js from '@eslint/js';
 import prettierPlugin from 'eslint-plugin-prettier';
-import simpleImportSort from 'eslint-plugin-simple-import-sort';
+import { defineConfig } from 'eslint/config';
 
-export default [
+export default defineConfig([
   {
+    files: ['**/*.js'],
     plugins: {
+      js,
       'simple-import-sort': simpleImportSort,
-      import: eslintPluginImport,
       prettier: prettierPlugin
     },
+    extends: ['js/recommended'],
     rules: {
       'simple-import-sort/imports': 'error',
-      'simple-import-sort/exports': 'error'
+      'simple-import-sort/exports': 'error',
+      'no-unused-vars': 'error',
+      'no-trailing-spaces': 'error'
     }
   }
-];
+]);

@@ -1,12 +1,22 @@
 [
   {
-    "id": "1",
-    "title": "tom-gonzalez.com",
-    "subtitle": "Développeur Angular",
+    "id": "3",
+    "title": "Testia",
+    "subtitle": "Développeur Web Angular Electron",
     "lieu": "Toulouse",
-    "descriptionShort": "Développement de mon site web personnel",
-    "description": "Développement de mon site vitrine full responsive inspiré d'hyprland",
-    "skills": ["Angular", "Material", "SCSS", "Git", "Github"]
+    "descriptionShort": "sur site durée 4mois : Développeur Web Angular Electron Secteur d'activité: Industrie (test non destructif) Iondt/PMD",
+    "description": "sur site durée 4mois : Développeur Web Angular Electron Secteur d'activité: Industrie (test non destructif) Iondt/PMD : \n - Développement de deux applications permettant le suivi et la génération de rapport lors de tests non destructifs \n - Développements du frontend sous Angular (TypeScript, HTML, Sass) et avec les framework de style Material Design \n - Améliorations UX-UI \n - Interactions avec un back Cloud (GraphQl) \n - Update librairies d’Angular 11 a Angular 16",
+    "skills": [
+      "Angular 16",
+      "Electron",
+      "SCSS",
+      "Material Design",
+      "Webstorm",
+      "Gitlab",
+      "OneLogin",
+      "GraphQL",
+      "Jira"
+    ]
   },
   {
     "id": "2",
@@ -23,25 +33,6 @@
       "Bitbucket",
       "PGSQL",
       "SAML2",
-      "Jira"
-    ]
-  },
-  {
-    "id": "3",
-    "title": "Testia",
-    "subtitle": "Développeur Web Angular Electron",
-    "lieu": "Toulouse",
-    "descriptionShort": "sur site durée 4mois : Développeur Web Angular Electron Secteur d'activité: Industrie (test non destructif) Iondt/PMD",
-    "description": "sur site durée 4mois : Développeur Web Angular Electron Secteur d'activité: Industrie (test non destructif) Iondt/PMD : \n - Développement de deux applications permettant le suivi et la génération de rapport lors de tests non destructifs \n - Développements du frontend sous Angular (TypeScript, HTML, Sass) et avec les framework de style Material Design \n - Améliorations UX-UI \n - Interactions avec un back Cloud (GraphQl) \n - Update librairies d’Angular 11 a Angular 16",
-    "skills": [
-      "Angular 16",
-      "Electron",
-      "SCSS",
-      "Material Design",
-      "Webstorm",
-      "Gitlab",
-      "OneLogin",
-      "GraphQL",
       "Jira"
     ]
   },

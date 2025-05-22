@@ -1,58 +1,63 @@
-<div class="window">
+<div class="form-wrapper">
+  <div class="form-text">
+    <h1>Ajouter un projet</h1>
+    <small>
+      (Ce formulaire est une copie de celui que j'utilise pour ajouter un
+      projet, il sert d'exemple pour vous, vous pouvez ajouter de nouveaux
+      projets mais rien ne sera sauvegardé)
+    </small>
+  </div>
   <form (ngSubmit)="onSubmit()">
     <mat-form-field>
-      <mat-label>Item Title</mat-label>
+      <mat-label>Title Projet</mat-label>
       <input matInput type="text" [(ngModel)]="item.title" name="title" />
     </mat-form-field>
     <br />
 
     <mat-form-field>
-      <mat-label>Item Subtitle</mat-label>
+      <mat-label>Sous-titre du projet</mat-label>
       <input matInput type="text" [(ngModel)]="item.subtitle" name="subtitle" />
     </mat-form-field>
     <br />
 
     <mat-form-field>
-      <mat-label>Item Description</mat-label>
-      <textarea
-        matInput
-        [(ngModel)]="item.description"
-        name="description"
-      ></textarea>
-    </mat-form-field>
-    <br />
-
-    <mat-form-field>
-      <mat-label>Short Description</mat-label>
+      <mat-label>Déscription courte du projet</mat-label>
       <input
         matInput
         type="text"
         [(ngModel)]="item.descriptionShort"
-        name="descriptionShort"
-      />
+        name="descriptionShort" />
     </mat-form-field>
     <br />
 
     <mat-form-field>
-      <mat-label>Item Image</mat-label>
+      <mat-label>Description détaillée du projet</mat-label>
+      <textarea
+        matInput
+        [(ngModel)]="item.description"
+        name="description"></textarea>
+    </mat-form-field>
+    <br />
+
+    <mat-form-field>
+      <mat-label>Image du projet</mat-label>
       <input matInput type="text" [(ngModel)]="item.image" name="image" />
     </mat-form-field>
     <br />
 
     <mat-form-field>
-      <mat-label>Skills (comma-separated)</mat-label>
+      <mat-label>Compétences (séparées par des virgules)</mat-label>
       <input
         matInput
         type="text"
         [(ngModel)]="skillsInput"
         name="skills"
-        (change)="updateSkills()"
-      />
+        (change)="updateSkills()" />
     </mat-form-field>
     <br />
 
     <mat-form-field>
-      <mat-label>Link</mat-label>
+      <mat-label>Lien</mat-label>
       <input matInput type="text" [(ngModel)]="item.link" name="link" />
     </mat-form-field>
     <br />
@@ -63,6 +68,8 @@
     </mat-form-field>
     <br />
 
-    <button mat-button>Add Item</button>
+    <div class="form-actions">
+      <button mat-button>Ajouter projet</button>
+    </div>
   </form>
 </div>

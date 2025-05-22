@@ -1,8 +1,8 @@
 <mat-card class="portfolio-card window">
   <mat-card-header>
-    <mat-card-title>{{ item ? item.title : '' }} </mat-card-title>
+    <mat-card-title>{{ item ? item.title : '' }}</mat-card-title>
     @if (item && item.subtitle) {
-      <mat-card-subtitle>{{ item.subtitle }} </mat-card-subtitle>
+      <mat-card-subtitle>{{ item.subtitle }}</mat-card-subtitle>
     }
   </mat-card-header>
 
@@ -20,6 +20,6 @@
   </mat-card-content>
 
   <mat-card-actions align="end">
-    <a mat-button routerLink="/portfolio/items/{{ item?.id }}">Voir</a>
+    <a mat-button routerLink="/portfolio/project/{{ item?.id }}">Voir</a>
   </mat-card-actions>
 </mat-card>

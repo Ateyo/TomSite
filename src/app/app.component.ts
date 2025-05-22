@@ -1,19 +1,19 @@
+import { HttpClient } from '@angular/common/http';
 import {
-  Component,
-  ViewChild,
   AfterViewInit,
   ChangeDetectorRef,
-  inject
+  Component,
+  inject,
+  ViewChild
 } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
 
-import { Router, NavigationEnd } from '@angular/router';
-import { MenuComponent } from './shared/menu/menu.component';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
+import { NavigationEnd, Router } from '@angular/router';
+import { MenuComponent } from './shared/components/menu/menu.component';
+import { MenuItem } from './shared/interfaces';
 import { SideNavService } from './shared/services/sidenav/side-nav.service';
 import { SharedModule } from './shared/shared.module';
-import { MenuItem } from './shared/interfaces';
 
 @Component({
   selector: 'app-root',
@@ -24,7 +24,7 @@ import { MenuItem } from './shared/interfaces';
     MenuComponent,
     SharedModule
   ],
-  providers: [HttpClient],
+  providers: [HttpClient, SharedModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
@@ -54,6 +54,7 @@ export class AppComponent implements AfterViewInit {
           case '/apropos':
           case '/cv':
           case '/mentions-legales':
+          case '/portfolio/form':
             this.isBGNeeded = true;
             break;
           default:

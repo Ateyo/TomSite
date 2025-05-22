@@ -1,5 +1,24 @@
-.window {
-  display: block;
+.form-wrapper {
+  display: flex;
   width: 100%;
-  color: red;
+  gap: 1rem;
+
+  .form-text {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 33%;
+  }
+  form {
+    flex: 1 0 auto;
+  }
+
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.mat-mdc-form-field {
+  display: flex;
+  max-width: 500px;
 }
