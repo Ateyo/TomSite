@@ -51,7 +51,7 @@
     & > * {
       display: flex;
       font-weight: 500;
-      line-height: 1.2rem;
+      line-height: 1.6rem;
       margin: 0 0 0.5rem 0;
     }
 
@@ -62,12 +62,23 @@
         display: inline-block;
       }
     }
+
+    @media only screen and (max-width: 768px) {
+      h2 {
+        font-size: 1.35rem;
+        line-height: 1.35rem;
+      }
+      h3 {
+        font-size: 1.25rem;
+        line-height: 1.25rem;
+      }
+    }
   }
 
   h3 {
     display: none;
 
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 992px) {
       display: inline-block;
     }
   }
@@ -85,15 +96,15 @@
       cursor: pointer;
     }
 
-    /* Small devices (landscape phones, under 768px) */
-    @media only screen and (max-width: 768px) {
+    /* Small devices (landscape phones, under 992px) */
+    @media only screen and (max-width: 991px) {
       display: flex;
     }
   }
   .menu-list {
     display: none;
-    /* Medium devices (landscape tablets, 768px and up) */
-    @media only screen and (min-width: 768px) {
+    /* Medium devices (landscape tablets, 992px and up) */
+    @media only screen and (min-width: 992px) {
       display: flex;
     }
   }

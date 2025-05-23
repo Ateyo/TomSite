@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { SharedModule } from '../../../../shared/shared.module';
+import { DomSanitizer } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
+import { SKILL_LINKS } from '../../../../shared/dictionnary/skills-links';
 import { PortfolioItem } from '../../../../shared/interfaces';
 import { PortfolioService } from '../../../../shared/services/portfolio/portfolio.service';
-import { ActivatedRoute } from '@angular/router';
-import { DomSanitizer } from '@angular/platform-browser';
-import { SKILL_LINKS } from '../../../../shared/dictionnary/skills-links';
+import { SharedModule } from '../../../../shared/shared.module';
 
 @Component({
   selector: 'app-portfolio-item',

@@ -1,7 +1,12 @@
 .form-wrapper {
   display: flex;
-  width: 100%;
+  flex-direction: column;
   gap: 1rem;
+  width: 100%;
+
+  @media only screen and (min-width: 992px) {
+    flex-direction: row;
+  }
 
   .form-text {
     display: flex;
