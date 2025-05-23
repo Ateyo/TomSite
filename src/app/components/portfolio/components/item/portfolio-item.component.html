@@ -9,7 +9,7 @@
   @if (item && item.image) {
     <img
       mat-card-image
-      src="./img/portfolio/{{ item.image }}"
+      [src]="getImageSrc(item.image)"
       alt="Portfolio {{ item.title }} image" />
   }
   <mat-card-content>
@@ -46,6 +46,16 @@
   </mat-card-content>
 
   <mat-card-actions align="end">
+    @if (item && item.link) {
+      <a
+        mat-button
+        color="primary"
+        href="{{ item.link }}"
+        target="_blank"
+        rel="noopener noreferrer">
+        Voir le projet
+      </a>
+    }
     <a mat-button routerLink="/portfolio">Retour à la liste</a>
   </mat-card-actions>
 </mat-card>

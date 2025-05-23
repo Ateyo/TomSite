@@ -22,7 +22,6 @@ export class PortfolioItemComponent {
     private _sanitizer: DomSanitizer
   ) {
     const id = this._route.snapshot.paramMap.get('id')!;
-
     this.item = this._portfolioService.getItemById(id)!;
 
     if (!this.item) {
@@ -35,6 +34,23 @@ export class PortfolioItemComponent {
   }
 
   getSkillUrl(skill: string): string | undefined {
-    return SKILL_LINKS[skill];
+    // Find the key in SKILL_LINKS that matches skill, case-insensitive
+    const key = Object.keys(SKILL_LINKS).find(
+      (k) => k.toLowerCase() === skill.toLowerCase()
+    );
+    return key ? SKILL_LINKS[key] : undefined;
+  }
+
+  isImageUrl(image?: string): boolean {
+    if (!image) return false;
+    // Checks if image starts with http:// or https://
+    return /^https?:\/\//i.test(image);
+  }
+
+  getImageSrc(image?: string): string | undefined {
+    if (!image) return undefined;
+    return this.isImageUrl(image)
+      ? image
+      : `./img/portfolio/${image}`;
   }
 }

@@ -6,7 +6,8 @@
     "lieu": "Toulouse",
     "descriptionShort": "Développement de mon site web personnel",
     "description": "Développement de mon site vitrine full responsive inspiré d'hyprland",
-    "skills": ["Angular", "Material", "SCSS", "Git", "Github"]
+    "skills": ["Angular", "Material", "SCSS", "Git", "Github"],
+    "link": "https://www.tom-gonzalez.com/"
   },
   {
     "id": "2",
@@ -71,7 +72,8 @@
       "GIT",
       "Linux"
     ],
-    "image": "cnom_1.jpg"
+    "image": "cnom_1.jpg",
+    "link": "https://www.conseil-national.medecin.fr/"
   },
   {
     "id": "6",

@@ -26,11 +26,11 @@ export class ItemFormComponent implements OnInit {
   constructor(private _portfolioService: PortfolioService) {
     this.projectForm = this._fb.group({
       title: ['', Validators.required],
-      subtitle: [''],
+      subtitle: ['', Validators.required],
       image: [''],
       images: [[]],
-      description: [''],
-      descriptionShort: [''],
+      description: ['', Validators.required],
+      descriptionShort: ['', Validators.required],
       skills: ['', Validators.required],
       link: [''],
       iframe: ['']
