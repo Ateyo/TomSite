@@ -7,16 +7,16 @@
       projets sur votre session,mais rien ne sera sauvegardé)
     </small>
   </div>
-  <form (ngSubmit)="onSubmit()">
+  <form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
     <mat-form-field>
-      <mat-label>Title Projet</mat-label>
-      <input matInput type="text" [(ngModel)]="item.title" name="title" />
+      <mat-label>Titre du Projet</mat-label>
+      <input matInput type="text" formControlName="title" name="title" />
     </mat-form-field>
     <br />
 
     <mat-form-field>
       <mat-label>Sous-titre du projet</mat-label>
-      <input matInput type="text" [(ngModel)]="item.subtitle" name="subtitle" />
+      <input matInput type="text" formControlName="subtitle" name="subtitle" />
     </mat-form-field>
     <br />
 
@@ -25,7 +25,7 @@
       <input
         matInput
         type="text"
-        [(ngModel)]="item.descriptionShort"
+        ormControlName="descriptionShort"
         name="descriptionShort" />
     </mat-form-field>
     <br />
@@ -34,42 +34,39 @@
       <mat-label>Description détaillée du projet</mat-label>
       <textarea
         matInput
-        [(ngModel)]="item.description"
+        formControlName="description"
         name="description"></textarea>
     </mat-form-field>
     <br />
 
     <mat-form-field>
       <mat-label>Image du projet</mat-label>
-      <input matInput type="text" [(ngModel)]="item.image" name="image" />
+      <input matInput type="text" formControlName="image" name="image" />
     </mat-form-field>
     <br />
 
     <mat-form-field>
       <mat-label>Compétences (séparées par des virgules)</mat-label>
-      <input
-        matInput
-        type="text"
-        [(ngModel)]="skillsInput"
-        name="skills"
-        (change)="updateSkills()" />
+      <input matInput type="text" formControlName="skills" name="skills" />
     </mat-form-field>
     <br />
 
     <mat-form-field>
       <mat-label>Lien</mat-label>
-      <input matInput type="text" [(ngModel)]="item.link" name="link" />
+      <input matInput type="text" formControlName="link" name="link" />
     </mat-form-field>
     <br />
 
     <mat-form-field>
       <mat-label>Iframe</mat-label>
-      <input matInput type="text" [(ngModel)]="item.iframe" name="iframe" />
+      <input matInput type="text" formControlName="iframe" name="iframe" />
     </mat-form-field>
     <br />
 
     <div class="form-actions">
-      <button mat-button>Ajouter projet</button>
+      <button mat-button type="submit" [disabled]="projectForm.invalid">
+        Ajouter Projet
+      </button>
     </div>
   </form>
 </div>

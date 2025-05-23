@@ -21,7 +21,6 @@ const matModules = [
   RouterLink,
   FormsModule,
   MatInputModule
-
   // Add other Material modules here as needed
 ];
 
