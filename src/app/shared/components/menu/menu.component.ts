@@ -16,10 +16,9 @@ export class MenuComponent {
   private _sideNavService = inject(SideNavService);
 
   menuItems: MenuItem[] = [
-    { label: 'A propos', link: '/apropos' },
+    { label: 'A propos', link: '/' },
     { label: 'CV', link: '/cv' },
     { label: 'Portfolio', link: '/portfolio' }
-    // { label: 'Contact', link: '/contact' }
   ];
 
   constructor() {

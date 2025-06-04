@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
-    path: 'apropos',
+    path: '',
     title: 'A Propos',
     loadComponent: () =>
       import('./components/apropos/apropos.component').then(
@@ -40,14 +40,6 @@ export const routes: Routes = [
       ).then((m) => m.ItemFormComponent)
   },
   {
-    path: 'contact',
-    title: 'Contact',
-    loadComponent: () =>
-      import('./components/contact/contact.component').then(
-        (m) => m.ContactComponent
-      )
-  },
-  {
     path: 'mentions-legales',
     title: 'Mentions Légales',
     loadComponent: () =>
@@ -57,6 +49,6 @@ export const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: '/apropos'
+    redirectTo: ''
   }
 ];

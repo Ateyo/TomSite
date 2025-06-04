@@ -5,7 +5,7 @@
     "subtitle": "Développeur Angular",
     "lieu": "Toulouse",
     "descriptionShort": "Développement de mon site web personnel",
-    "description": "Développement de mon site vitrine full responsive inspiré d'hyprland",
+    "description": "Développement de mon site vitrine full responsive inspiré d'hyprland en Angular 19",
     "skills": ["Angular", "Material", "SCSS", "Git", "Github"],
     "link": "https://www.tom-gonzalez.com/"
   },
@@ -29,11 +29,11 @@
   },
   {
     "id": "3",
-    "title": "Testia",
+    "title": "Testia - PMD",
     "subtitle": "Développeur Web Angular Electron",
     "lieu": "Toulouse",
-    "descriptionShort": "sur site durée 4mois : Développeur Web Angular Electron Secteur d'activité: Industrie (test non destructif) Iondt/PMD",
-    "description": "sur site durée 4mois : Développeur Web Angular Electron Secteur d'activité: Industrie (test non destructif) Iondt/PMD : \n - Développement de deux applications permettant le suivi et la génération de rapport lors de tests non destructifs \n - Développements du frontend sous Angular (TypeScript, HTML, Sass) et avec les framework de style Material Design \n - Améliorations UX-UI \n - Interactions avec un back Cloud (GraphQl) \n - Update librairies d’Angular 11 a Angular 16",
+    "descriptionShort": "sur site durée 4mois : Développeur Web Angular Electron Secteur d'activité: Industrie (test non destructif) PMD",
+    "description": "sur site durée 4mois : Développeur Web Angular Electron Secteur d'activité: Industrie (test non destructif) PMD : \n - Développement de deux applications permettant le suivi et la génération de rapport lors de tests non destructifs \n - Développements du frontend sous Angular (TypeScript, HTML, Sass) et avec les framework de style Material Design \n - Améliorations UX-UI \n - Interactions avec un back Cloud (GraphQl) \n - Update librairies d’Angular 11 a Angular 16 \n Application permettant la prise de photo et l'annotation de celle-ci pour la création de rapport de test non destructif",
     "skills": [
       "Angular 16",
       "Electron",
@@ -48,6 +48,25 @@
   },
   {
     "id": "4",
+    "title": "Testia - IoNDT",
+    "subtitle": "Développeur Web Angular Electron",
+    "lieu": "Toulouse",
+    "descriptionShort": "sur site durée 4mois : Développeur Web Angular Electron Secteur d'activité: Industrie (test non destructif) Iondt",
+    "description": "sur site durée 4mois : Développeur Web Angular Electron Secteur d'activité: Industrie (test non destructif) Iondt : \n - Développement de deux applications permettant le suivi et la génération de rapport lors de tests non destructifs \n - Développements du frontend sous Angular (TypeScript, HTML, Sass) et avec les framework de style Material Design \n - Améliorations UX-UI \n - Interactions avec un back Cloud (GraphQl) \n - Update librairies d’Angular 11 a Angular 16 \n Application permettant le suivi d'une flotte de véhilules ainsi que les étapes de maintenance de celles-ci.",
+    "skills": [
+      "Angular 16",
+      "Electron",
+      "SCSS",
+      "Material Design",
+      "Webstorm",
+      "Gitlab",
+      "OneLogin",
+      "GraphQL",
+      "Jira"
+    ]
+  },
+  {
+    "id": "5",
     "title": "BA Healthcare",
     "subtitle": "Développeur Web Angular",
     "lieu": "Toulouse",
@@ -56,8 +75,8 @@
     "skills": ["Angular 14", "SCSS", "TailwindCSS", "DaisyUi", "NestJs", "GIT"]
   },
   {
-    "id": "5",
-    "title": "Conseil National de l'Ordre des Médecins",
+    "id": "6",
+    "title": "Conseil National de l'Ordre des Médecins - Site National",
     "subtitle": "Développeur Référent UX-UI",
     "lieu": "Paris",
     "descriptionShort": "durée 7ans : Développeur web pour la flotte de sites régionaux, départementaux et internes du Conseil National de l'Ordre des Médecins",
@@ -76,7 +95,7 @@
     "link": "https://www.conseil-national.medecin.fr/"
   },
   {
-    "id": "6",
+    "id": "7",
     "title": "Documentaire Médiamag",
     "subtitle": "Réalisateur, Ecrivain",
     "descriptionShort": "Recherche + écriture d'un documentaire sur la musique dans les jeux vidéos",
@@ -85,7 +104,7 @@
     "skills": ["Recherche", "Montage", "Enregistrement audio", "Ecriture"]
   },
   {
-    "id": "7",
+    "id": "8",
     "title": "Court Métrage - \"Jaune\"",
     "subtitle": "Réalisateur, Ecrivain, Monteur",
     "descriptionShort": "Réalisation d'un court métrage de fiction durant mon DUT",
@@ -94,7 +113,7 @@
     "skills": ["Recherche", "Montage", "Réalisation", "Ecriture"]
   },
   {
-    "id": "8",
+    "id": "9",
     "title": "Ancien site web personnel",
     "subtitle": "Développeur Web",
     "descriptionShort": "Développement de mon site web personnel",
@@ -103,7 +122,7 @@
     "lien": "https://www.tom-gonzalez.com/old/"
   },
   {
-    "id": "9",
+    "id": "10",
     "title": "Aftermovie Immersions Digitales",
     "subtitle": "Réalisateur",
     "descriptionShort": "Réalisation d'un aftermovie des journées portes ouvertes de IUT de Tarbes",
@@ -112,7 +131,7 @@
     "skills": ["Recherche", "Montage", "Réalisation", "Ecriture"]
   },
   {
-    "id": "10",
+    "id": "11",
     "title": "Clémence Roche psychologue",
     "subtitle": "Développeur web",
     "descriptionShort": "Développement de site vitrine pour une psychologue",

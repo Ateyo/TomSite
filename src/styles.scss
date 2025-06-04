@@ -1,8 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @use '@angular/material' as mat;
-@import '@angular/material/prebuilt-themes/cyan-orange.css';
-@import 'https://www.nerdfonts.com/assets/css/webfont.css';
+@use '@angular/material/prebuilt-themes/cyan-orange.css';
+@use 'app/styles/roboto.scss';
+@use 'app/styles/material-icons.scss';
+@use 'app/styles/inter-tight.scss';
 
+@import 'https://www.nerdfonts.com/assets/css/webfont.css';
 /**CHEAT SHEET**/
 // :root {
 //   --mat-sys-background: light-dark(#f7faf9, #101414);
